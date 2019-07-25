@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-hello-world-external
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx-hello-world
+  ports:
+  - name: http
+    port: 84
+    targetPort: 83
